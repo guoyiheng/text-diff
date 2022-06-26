@@ -9,4 +9,7 @@
   <samp> <a href="http://diff.gyh.cool/">diff.gyh.cool</a> </samp>
 </p>
 
-- [] 主题 one dark or vitesse
+## TODO
+
+- [ ] 主题 one dark or vitesse
+- [ ] 可选语言模式
