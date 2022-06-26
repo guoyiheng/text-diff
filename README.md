@@ -1,12 +1,12 @@
 <h1 align='center'>
-   <samp>Pronunciation Corrector</samp>
+   <samp>Text Diff</samp>
 </h1>
 <p align = "center">
-  <samp>"Make Pronunciation Right Again!"</samp>
+  <samp>"Find out who change mind！"</samp>
 </p>
 
 <p align='center'>
-  <samp> <a href="http://pc.gyh.cool/">pc.gyh.cool</a> </samp>
+  <samp> <a href="http://diff.gyh.cool/">diff.gyh.cool</a> </samp>
 </p>
 
-![pc.gyh.cool](./pc.gyh.cool.png)
+- [] 主题 one dark or vitesse

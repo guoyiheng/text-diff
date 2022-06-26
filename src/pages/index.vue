@@ -1,30 +1,32 @@
 <script setup lang="ts">
-const lhsResponse = 'the quick red fox\njumped over the hairy dog'
-const rhsResponse = 'the quick brown fox\njumped over the lazy dog'
-// const mergelyRef: any = ref(null)
-// onMounted(() => {
+import TextDiff from '~/components/TextDiff.vue'
 
-//   // initialize mergely of vue
-//   nextTick(() => {
-//     // initialize mergely
-//     mergely.value.init()
+const lhsResponse = `I'm Nobody! Who are you?
+Are you – Nobody – too?
+Then there's a pair of us!
+Don't tell! they'd advertise – you know!
 
-//     // get async lhsResponse, then set lhs value
-//     mergely.value.setLhs(lhsResponse)
+How dreary – to be – Somebody!
+How public – like a Frog –
+To tell one's name – the livelong June –
+To an admiring Bog!`
+const rhsResponse = lhsResponse.replaceAll('Nobody', 'The One')
+  .replace('Frog', 'Frog-Lord')
 
-//     // get async rhsResponse, then set rhs value
-//     mergely.value.setRhs(rhsResponse)
-//   })
-// })
+const collapse = ref(false)
+const contentAlign = ref(true)
 </script>
 
 <template>
-  <div class="mergely-full-screen-8">
-    <div class="mergely-resizer">
-      <div id="mergely" ref="mergelyRef" />
-    </div>
+  <div flex mb2 op30 text-xs>
+    <button flex="~ gap1" items-center @click="collapse = !collapse">
+      <div :i="collapse ? 'carbon-checkbox-checked' : 'carbon-checkbox'" />
+      Collapse
+    </button>
+    <button flex="~ gap1" items-center ml-2 @click="contentAlign = !contentAlign">
+      <div :i="contentAlign ? 'carbon-checkbox-checked' : 'carbon-checkbox'" />
+      Content Align
+    </button>
   </div>
+  <TextDiff :old-value="lhsResponse" :new-value="rhsResponse" :collapse="collapse" :content-align="contentAlign" />
 </template>
-
-<style scoped>
-</style>

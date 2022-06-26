@@ -8,7 +8,6 @@ import {
 
 export default defineConfig({
   shortcuts: [
-    ['word-block', 'px-2 py-1.5 rounded text-center hover:bg-gray-500 hover:bg-opacity-10 cursor-pointer'],
     [/^icon-btn-(.*)$/, ([, c], { theme }) => {
       const color = (theme as any).colors[c]
       if (color)
@@ -32,7 +31,7 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      primary: '#0d9488', // teal-600
+      primary: '#9F353A', // teal-600
       disabled: '#4b5563', // gray-600
     },
   },
